@@ -10,14 +10,15 @@ A new Flutter project.
 
 mobile : -
 
-![shopbuzz](https://user-images.githubusercontent.com/97453465/165001281-8c60f86b-89ea-4fef-ade0-1475e1ae1b55.png)
 
+![pngwing com (2)](https://user-images.githubusercontent.com/97453465/165005627-5c97d08b-d490-42c8-9c41-ea4ec7fcc016.png)
 
 
 
 Desktop / Web : -
 
-![Screenshot 2022-04-25 at 4 02 20 AM](https://user-images.githubusercontent.com/97453465/164999674-faac069d-bc9f-4118-90f3-7a7f0eec980b.png)
+
+![mac](https://user-images.githubusercontent.com/97453465/165005324-03d53bdd-8e9e-4515-8b05-41503390b4b5.png)
 
 
 
