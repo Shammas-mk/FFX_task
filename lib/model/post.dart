@@ -48,7 +48,7 @@ class Item {
     // required this.postComments,
     // required this.liked,
     // required this.likesCount,
-    required this.likes,
+    // required this.likes,
     // required this.contestPrizes,
     // required this.actionButtons,
     required this.assets,
@@ -83,7 +83,7 @@ class Item {
   // List<PostComment> postComments;
   // String liked;
   // LikesCount likesCount;
-  List<Like> likes;
+  // List<Like> likes;
   // List<ContestPrize> contestPrizes;
   // List<ActionButton> actionButtons;
   List<Asset> assets;
@@ -120,7 +120,7 @@ class Item {
         //     json["postComments"].map((x) => PostComment.fromJson(x))),
         // liked: json["liked"],
         // likesCount: LikesCount.fromJson(json["likesCount"]),
-        likes: List<Like>.from(json["likes"].map((x) => Like.fromJson(x))),
+        // likes: List<Like>.from(json["likes"].map((x) => Like.fromJson(x))),
         // contestPrizes: List<ContestPrize>.from(
         //     json["contestPrizes"].map((x) => ContestPrize.fromJson(x))),
         // actionButtons: List<ActionButton>.from(
