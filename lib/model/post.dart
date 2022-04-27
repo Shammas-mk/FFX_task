@@ -44,7 +44,7 @@ class Item {
     // required this.postType,
     // required this.name,
     required this.userInfo,
-    // required this.shareLinks,
+    required this.shareLinks,
     // required this.postComments,
     // required this.liked,
     // required this.likesCount,
@@ -79,7 +79,7 @@ class Item {
   // String postType;
   // String name;
   UserInfo userInfo;
-  // List<ShareLink> shareLinks;
+  List<ShareLink> shareLinks;
   // List<PostComment> postComments;
   // String liked;
   // LikesCount likesCount;
@@ -114,8 +114,8 @@ class Item {
         // postType: json["postType"],
         // name: json["name"],
         userInfo: UserInfo.fromJson(json["userInfo"]),
-        // shareLinks: List<ShareLink>.from(
-        //     json["shareLinks"].map((x) => ShareLink.fromJson(x))),
+        shareLinks: List<ShareLink>.from(
+            json["shareLinks"].map((x) => ShareLink.fromJson(x))),
         // postComments: List<PostComment>.from(
         //     json["postComments"].map((x) => PostComment.fromJson(x))),
         // liked: json["liked"],

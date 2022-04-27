@@ -41,6 +41,7 @@ dependencies:
   dots_indicator: ^2.1.0
   http: ^0.13.4
   get: ^4.6.1
+  flutter_share: ^2.0.0
  
 
 dev_dependencies:

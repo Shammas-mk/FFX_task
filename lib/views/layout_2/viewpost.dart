@@ -4,7 +4,9 @@ import 'package:shopbuzz/model/post.dart';
 import 'package:shopbuzz/services/remote_service.dart';
 
 class ViewPost extends StatelessWidget {
-  const ViewPost({Key? key}) : super(key: key);
+  var FlutterShare;
+
+  ViewPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +78,7 @@ class ViewPost extends StatelessWidget {
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
                   //changed here
+
                   Text('${item2.publishAt.hour} hours ago',
                       style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
@@ -84,7 +87,9 @@ class ViewPost extends StatelessWidget {
                 width: 10,
               ),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    item2.shareLinks.cast();
+                  },
                   icon: const Icon(
                     Icons.screen_share_outlined,
                     color: Colors.black,
@@ -133,8 +138,9 @@ class ViewPost extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Text(
-                'like',
+              const Text(
+                '69',
+                // '${item2.liked.toString()}',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
@@ -146,8 +152,8 @@ class ViewPost extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Text(
-                "sdf",
+              const Text(
+                "35",
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
@@ -160,10 +166,10 @@ class ViewPost extends StatelessWidget {
               )),
               const SizedBox(
                 width: 10,
-              ),
-              Text(
-                "dfg",
-                style: TextStyle(fontWeight: FontWeight.w600),
+                child: Text(
+                  "35",
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
               ),
               const SizedBox(
                 width: 10,
