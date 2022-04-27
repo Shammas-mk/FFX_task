@@ -4,7 +4,7 @@ import 'package:shopbuzz/model/post.dart';
 import 'package:shopbuzz/services/remote_service.dart';
 
 class ViewPost extends StatelessWidget {
-  const ViewPost({Key? key}) : super(key: key);
+  ViewPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +134,7 @@ class ViewPost extends StatelessWidget {
                 width: 10,
               ),
               Text(
-                "sdf",
+                'like',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
