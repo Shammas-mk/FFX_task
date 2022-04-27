@@ -76,7 +76,7 @@ class ViewPost extends StatelessWidget {
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
                   //changed here
-                  Text('${item2.publishAt} minutes ago',
+                  Text('${item2.publishAt.hour} hours ago',
                       style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
               )),
