@@ -19,6 +19,9 @@ class AddWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Icon(Icons.add_circle_outline_rounded, color: Color(0xFF5EA6ED)),
+            SizedBox(
+              width: 10,
+            ),
             Text(
               "Add post",
               style: TextStyle(
