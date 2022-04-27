@@ -52,7 +52,7 @@ class Item {
     // required this.contestPrizes,
     // required this.actionButtons,
     required this.assets,
-    // required this.publishAt,
+    required this.publishAt,
     // required this.canEdit,
     // required this.canDelete,
     // required this.futureDated,
@@ -87,7 +87,7 @@ class Item {
   // List<ContestPrize> contestPrizes;
   // List<ActionButton> actionButtons;
   List<Asset> assets;
-  // DateTime publishAt;
+  DateTime publishAt;
   // bool canEdit;
   // bool canDelete;
   // bool futureDated;
@@ -126,7 +126,7 @@ class Item {
         // actionButtons: List<ActionButton>.from(
         //     json["actionButtons"].map((x) => ActionButton.fromJson(x))),
         assets: List<Asset>.from(json["assets"].map((x) => Asset.fromJson(x))),
-        // publishAt: DateTime.parse(json["publishAt"]),
+        publishAt: DateTime.parse(json["publishAt"]),
         // canEdit: json["canEdit"],
         // canDelete: json["canDelete"],
         // futureDated: json["futureDated"],

@@ -71,12 +71,13 @@ class ViewPost extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${item2.userInfo.displayName}',
+                    item2.userInfo.displayName,
                     style: const TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
-                  Text('sdf minutes ago',
-                      style: TextStyle(color: Colors.grey, fontSize: 13))
+                  //changed here
+                  Text('${item2.publishAt} minutes ago',
+                      style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
               )),
               const SizedBox(
