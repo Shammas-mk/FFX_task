@@ -4,9 +4,7 @@ import 'package:shopbuzz/model/post.dart';
 import 'package:shopbuzz/services/remote_service.dart';
 
 class ViewPost extends StatelessWidget {
-  var FlutterShare;
-
-  ViewPost({Key? key}) : super(key: key);
+  const ViewPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +44,7 @@ class ViewPost extends StatelessWidget {
               margin: const EdgeInsets.only(top: 180),
               child: const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.red,
+                  color: Colors.green,
                 ),
               ),
             );
@@ -77,8 +75,10 @@ class ViewPost extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
+                  const SizedBox(
+                    height: 5,
+                  ),
                   //changed here
-
                   Text('${item2.publishAt.hour} hours ago',
                       style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
@@ -87,9 +87,7 @@ class ViewPost extends StatelessWidget {
                 width: 10,
               ),
               IconButton(
-                  onPressed: () {
-                    item2.shareLinks.cast();
-                  },
+                  onPressed: () {},
                   icon: const Icon(
                     Icons.screen_share_outlined,
                     color: Colors.black,
@@ -106,20 +104,11 @@ class ViewPost extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Html(
             data: '${item2.text}',
-            // style: TextStyle(
-            //   fontWeight: FontWeight.w600,
-            // ),
-            // textAlign: TextAlign.start,
           ),
         ),
         Container(
           alignment: Alignment.centerLeft,
           margin: const EdgeInsets.only(left: 15, bottom: 10),
-          // child: const
-          // Text(
-          //   "Read more",
-          //   style: TextStyle(fontWeight: FontWeight.w300, color: Colors.grey),
-          // ),
         ),
         if (item2.assets.length > 0)
           Image.network(
@@ -131,10 +120,7 @@ class ViewPost extends StatelessWidget {
               const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
           child: Row(
             children: [
-              const Icon(
-                Icons.thumb_up_alt_outlined,
-                color: Color(0xFF70D65C),
-              ),
+              getLikeType(),
               const SizedBox(
                 width: 10,
               ),
@@ -153,7 +139,7 @@ class ViewPost extends StatelessWidget {
                 width: 10,
               ),
               const Text(
-                "35",
+                'item2.likes[]',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
@@ -167,7 +153,7 @@ class ViewPost extends StatelessWidget {
               const SizedBox(
                 width: 10,
                 child: Text(
-                  "35",
+                  "8",
                   style: TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -193,6 +179,15 @@ class ViewPost extends StatelessWidget {
           color: Colors.white,
           border: Border.all(color: color, width: 3.5),
           borderRadius: const BorderRadius.all(Radius.circular(20))),
+    );
+  }
+
+  getLikeCount() {}
+
+  getLikeType() {
+    return const Icon(
+      Icons.thumb_up_alt_outlined,
+      color: Color(0xFF70D65C),
     );
   }
 }
