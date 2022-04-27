@@ -4,7 +4,7 @@ import 'package:shopbuzz/model/post.dart';
 import 'package:shopbuzz/services/remote_service.dart';
 
 class ViewPost extends StatelessWidget {
-  ViewPost({Key? key}) : super(key: key);
+  const ViewPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,10 @@ class ViewPost extends StatelessWidget {
         future: RemoteService.fetchPost(),
         builder: (context, data) {
           if (data.hasData) {
-            int pagen = 0;
+            int page = 0;
             if (data.data != null) {
               Feed obj = feedFromJson(data.data.toString());
-              pagen = obj.page;
+              page = obj.page;
 
               return ListView.builder(
                   shrinkWrap: true,
@@ -61,7 +61,7 @@ class ViewPost extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: NetworkImage('${item2.userInfo.photoUrl}'),
+                backgroundImage: NetworkImage(item2.userInfo.photoUrl),
               ),
               const SizedBox(
                 width: 10,
@@ -76,7 +76,7 @@ class ViewPost extends StatelessWidget {
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
                   //changed here
-                  Text('${item2.publishAt.hour} hours ago',
+                  Text('${item2.publishAt}',
                       style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
               )),
