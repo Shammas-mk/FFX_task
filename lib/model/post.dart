@@ -44,15 +44,15 @@ class Item {
     // required this.postType,
     // required this.name,
     required this.userInfo,
-    // required this.shareLinks,
+    required this.shareLinks,
     // required this.postComments,
     // required this.liked,
     // required this.likesCount,
-    // required this.likes,
+    required this.likes,
     // required this.contestPrizes,
     // required this.actionButtons,
     required this.assets,
-    // required this.publishAt,
+    required this.publishAt,
     // required this.canEdit,
     // required this.canDelete,
     // required this.futureDated,
@@ -79,15 +79,15 @@ class Item {
   // String postType;
   // String name;
   UserInfo userInfo;
-  // List<ShareLink> shareLinks;
+  List<ShareLink> shareLinks;
   // List<PostComment> postComments;
   // String liked;
   // LikesCount likesCount;
-  // List<Like> likes;
+  List<Like> likes;
   // List<ContestPrize> contestPrizes;
   // List<ActionButton> actionButtons;
   List<Asset> assets;
-  // DateTime publishAt;
+  DateTime publishAt;
   // bool canEdit;
   // bool canDelete;
   // bool futureDated;
@@ -114,19 +114,19 @@ class Item {
         // postType: json["postType"],
         // name: json["name"],
         userInfo: UserInfo.fromJson(json["userInfo"]),
-        // shareLinks: List<ShareLink>.from(
-        //     json["shareLinks"].map((x) => ShareLink.fromJson(x))),
+        shareLinks: List<ShareLink>.from(
+            json["shareLinks"].map((x) => ShareLink.fromJson(x))),
         // postComments: List<PostComment>.from(
         //     json["postComments"].map((x) => PostComment.fromJson(x))),
         // liked: json["liked"],
         // likesCount: LikesCount.fromJson(json["likesCount"]),
-        // likes: List<Like>.from(json["likes"].map((x) => Like.fromJson(x))),
+        likes: List<Like>.from(json["likes"].map((x) => Like.fromJson(x))),
         // contestPrizes: List<ContestPrize>.from(
         //     json["contestPrizes"].map((x) => ContestPrize.fromJson(x))),
         // actionButtons: List<ActionButton>.from(
         //     json["actionButtons"].map((x) => ActionButton.fromJson(x))),
         assets: List<Asset>.from(json["assets"].map((x) => Asset.fromJson(x))),
-        // publishAt: DateTime.parse(json["publishAt"]),
+        publishAt: DateTime.parse(json["publishAt"]),
         // canEdit: json["canEdit"],
         // canDelete: json["canDelete"],
         // futureDated: json["futureDated"],

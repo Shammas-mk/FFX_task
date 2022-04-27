@@ -14,10 +14,10 @@ class ViewPost extends StatelessWidget {
         future: RemoteService.fetchPost(),
         builder: (context, data) {
           if (data.hasData) {
-            int pagen = 0;
+            int page = 0;
             if (data.data != null) {
               Feed obj = feedFromJson(data.data.toString());
-              pagen = obj.page;
+              page = obj.page;
 
               return ListView.builder(
                   shrinkWrap: true,
@@ -44,7 +44,7 @@ class ViewPost extends StatelessWidget {
               margin: const EdgeInsets.only(top: 180),
               child: const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.red,
+                  color: Colors.green,
                 ),
               ),
             );
@@ -61,7 +61,7 @@ class ViewPost extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: NetworkImage('${item2.userInfo.photoUrl}'),
+                backgroundImage: NetworkImage(item2.userInfo.photoUrl),
               ),
               const SizedBox(
                 width: 10,
@@ -71,12 +71,16 @@ class ViewPost extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${item2.userInfo.displayName}',
+                    item2.userInfo.displayName,
                     style: const TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w600),
                   ),
-                  Text('sdf minutes ago',
-                      style: TextStyle(color: Colors.grey, fontSize: 13))
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  //changed here
+                  Text('${item2.publishAt.hour} hours ago',
+                      style: const TextStyle(color: Colors.grey, fontSize: 13))
                 ],
               )),
               const SizedBox(
@@ -100,20 +104,11 @@ class ViewPost extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Html(
             data: '${item2.text}',
-            // style: TextStyle(
-            //   fontWeight: FontWeight.w600,
-            // ),
-            // textAlign: TextAlign.start,
           ),
         ),
         Container(
           alignment: Alignment.centerLeft,
           margin: const EdgeInsets.only(left: 15, bottom: 10),
-          // child: const
-          // Text(
-          //   "Read more",
-          //   style: TextStyle(fontWeight: FontWeight.w300, color: Colors.grey),
-          // ),
         ),
         if (item2.assets.length > 0)
           Image.network(
@@ -125,15 +120,13 @@ class ViewPost extends StatelessWidget {
               const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
           child: Row(
             children: [
-              const Icon(
-                Icons.thumb_up_alt_outlined,
-                color: Color(0xFF70D65C),
-              ),
+              getLikeType(),
               const SizedBox(
                 width: 10,
               ),
-              Text(
-                "sdf",
+              const Text(
+                '69',
+                // '${item2.liked.toString()}',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
@@ -145,8 +138,8 @@ class ViewPost extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Text(
-                "sdf",
+              const Text(
+                'item2.likes[]',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
@@ -159,10 +152,10 @@ class ViewPost extends StatelessWidget {
               )),
               const SizedBox(
                 width: 10,
-              ),
-              Text(
-                "dfg",
-                style: TextStyle(fontWeight: FontWeight.w600),
+                child: Text(
+                  "8",
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
               ),
               const SizedBox(
                 width: 10,
@@ -186,6 +179,15 @@ class ViewPost extends StatelessWidget {
           color: Colors.white,
           border: Border.all(color: color, width: 3.5),
           borderRadius: const BorderRadius.all(Radius.circular(20))),
+    );
+  }
+
+  getLikeCount() {}
+
+  getLikeType() {
+    return const Icon(
+      Icons.thumb_up_alt_outlined,
+      color: Color(0xFF70D65C),
     );
   }
 }
