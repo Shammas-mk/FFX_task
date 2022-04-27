@@ -29,159 +29,28 @@ class ViewPost extends StatelessWidget {
               // return Container(
               //   child: Center(child: Text(pagen.toString())),
               // );
-            } else
+            } else {
               return Container(
-                margin: EdgeInsets.only(top: 180),
-                child: Center(
+                margin: const EdgeInsets.only(top: 180),
+                child: const Center(
                   child: CircularProgressIndicator(
                     color: Colors.red,
                   ),
                 ),
               );
-          } else
+            }
+          } else {
             return Container(
-              margin: EdgeInsets.only(top: 180),
-              child: Center(
+              margin: const EdgeInsets.only(top: 180),
+              child: const Center(
                 child: CircularProgressIndicator(
                   color: Colors.red,
                 ),
               ),
             );
+          }
         });
-    // print("Afsal ");
-    // return SizedBox(
-    //   width: double.infinity,
-    //   child: Column(
-    //     children: [
-    //       getPostItem(obj.item),
-    //       getPostItem(),
-    //       getPostItem(),
-    //     ],
-    //   ),
-    // );
   }
-
-  // getPostItem(Item item) {
-  //   return Column(
-  //     children: [
-  //       Container(
-  //         margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
-  //         child: Row(
-  //           children: [
-  //             CircleAvatar(
-  //               radius: 15,
-  //               backgroundImage: NetworkImage(
-  //                   // '${item.userInfo.photoUrl}',
-  //                   "cfhgdfg"),
-  //             ),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             Expanded(
-  //                 child: Column(
-  //               crossAxisAlignment: CrossAxisAlignment.start,
-  //               children: [
-  //                 Text(
-  //                   '${item.userInfo.displayName}',
-  //                   style: const TextStyle(
-  //                       color: Colors.black, fontWeight: FontWeight.w600),
-  //                 ),
-  //                 Text('${item.createdAt} minutes ago',
-  //                     style: TextStyle(color: Colors.grey, fontSize: 13))
-  //               ],
-  //             )),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             IconButton(
-  //                 onPressed: () {},
-  //                 icon: const Icon(
-  //                   Icons.screen_share_outlined,
-  //                   color: Colors.black,
-  //                 )),
-  //             IconButton(
-  //                 onPressed: () {},
-  //                 icon: const Icon(Icons.more_horiz_rounded,
-  //                     color: Colors.black)),
-  //           ],
-  //         ),
-  //       ),
-  //       Container(
-  //         margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-  //         child: Text(
-  //           '${item.text}',
-  //           style: TextStyle(fontWeight: FontWeight.w600),
-  //         ),
-  //       ),
-  //       Container(
-  //         alignment: Alignment.centerLeft,
-  //         margin: const EdgeInsets.only(left: 15, bottom: 10),
-  //         child: const Text(
-  //           "Read more",
-  //           style: TextStyle(fontWeight: FontWeight.w300, color: Colors.grey),
-  //         ),
-  //       ),
-  //       Image.network(
-  //         '${item.tcUrl}',
-  //         fit: BoxFit.cover,
-  //       ),
-  //       Container(
-  //         margin:
-  //             const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
-  //         child: Row(
-  //           children: [
-  //             const Icon(
-  //               Icons.thumb_up_alt_outlined,
-  //               color: Color(0xFF70D65C),
-  //             ),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             Text(
-  //               "${item.likesCount}",
-  //               style: TextStyle(fontWeight: FontWeight.w600),
-  //             ),
-  //             const SizedBox(
-  //               width: 15,
-  //             ),
-  //             getDot(const Color.fromARGB(255, 255, 36, 20)),
-  //             getDot(const Color.fromARGB(255, 231, 255, 20)),
-  //             getDot(const Color.fromARGB(255, 20, 102, 255)),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             Text(
-  //               "${item.likes}",
-  //               style: TextStyle(fontWeight: FontWeight.w600),
-  //             ),
-  //             const SizedBox(
-  //               width: 15,
-  //             ),
-  //             const Expanded(
-  //                 child: Text(
-  //               "All Reactions",
-  //               style: TextStyle(color: Colors.grey),
-  //             )),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             Text(
-  //               "${item.likes}",
-  //               style: TextStyle(fontWeight: FontWeight.w600),
-  //             ),
-  //             const SizedBox(
-  //               width: 10,
-  //             ),
-  //             const Icon(
-  //               Icons.message_outlined,
-  //               color: Color.fromARGB(255, 0, 0, 0),
-  //             ),
-  //           ],
-  //         ),
-  //       )
-  //     ],
-  //   );
-  // }
 
   getPostItem(Item item2) {
     return Column(
